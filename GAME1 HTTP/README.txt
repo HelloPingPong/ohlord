@@ -82,16 +82,16 @@ and I couldn't have done it without the help of the following people:
 while undertaking the 14-week Java bootcamp at Tech Elevator. he personally recommended me to take this course in the first place and 
 I wouldnt have been here without him.
 
-3. My girlfriend Kate, who has been a huge support and incredible encouragement. Our time together is always a joy.
+3. Kate. A huge support and incredible encouragement. Our time together is always a joy.
 
-4. My family, who have always been there for me and have always supported me. I love you all.
+4. My family, whom I love dearly.
 
 5. My friends Colby and Alec. I've always struggled with timeliness and organization, but you guys have helped me to improve in those areas
-and I'm so grateful for that. I would have been kicked out from the program for being late if it weren't for your advice, loyalty, and help.
+and I'm so grateful for that. I wouldn't have made it through if it weren't for your advice, loyalty, and help.
 
 6. My campus director, Kevin, who has been both a frequent encourager and willing disciplinarian. I'm grateful for and often in need of both.
 
-7. My friends at Tech Elevator. I've made so many friends at Tech Elevator and I'm so grateful for that. I've learned so much from you guys
+7. My friends at Tech Elevator. I've made so many friends here at Tech Elevator and I'm so grateful for that. I've learned so much from you guys
 and I'm so glad I got to spend the last 14 weeks with you. I'm looking forward to seeing what the future holds for us all and our friendships.
 
 
