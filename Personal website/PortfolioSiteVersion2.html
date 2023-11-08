@@ -1,0 +1,139 @@
+<html>
+<head>
+  <style>
+    /* Define some variables for the color scheme */
+    :root {
+      --bg-color: #0f0f0f; /* A dark gray color for the background */
+      --text-color: #f0f0f0; /* A light gray color for the text */
+      --accent-color: #ff00ff; /* A magenta color for the accents */
+      --gradient-color: #fff200; /* A cyan color for the gradients */
+    }
+
+    /* Apply a global style to the web page */
+    * {
+      box-sizing: border-box; /* Make the width and height of elements include padding and border */
+      margin: 0; /* Remove the default margin of elements */
+      padding: 0; /* Remove the default padding of elements */
+      font-family: "Courier New", monospace; /* Use a monospace font for the text */
+      color: var(--text-color); /* Use the text color variable for the text color */
+    }
+
+    /* Define a style for the body element */
+    body {
+      background: linear-gradient(to right, var(--bg-color), var(--gradient-color)); /* Use a linear gradient for the background color */
+      display: flex; /* Use flexbox to layout the child elements */
+      flex-direction: column; /* Arrange the child elements in a vertical direction */
+      align-items: center; /* Center the child elements horizontally */
+    }
+
+    /* Define a style for the header element */
+    header {
+      width: 100%; /* Make the header element span the entire width of the page */
+      background-color: var(--accent-color); /* Use the accent color variable for the background color */
+      padding: 20px; /* Add some padding around the header element */
+    }
+
+    /* Define a style for the h1 element inside the header element */
+    header h1 {
+      text-align: center; /* Center the text horizontally */
+      font-size: 36px; /* Increase the font size of the text */
+      text-shadow: 2px 2px 4px black; /* Add a shadow effect to/
+     the text */
+    }
+
+/* Define a style for the main element */
+main {
+  width: 80%; /* Make the main element span 80% of the width of the page */
+  max-width: 800px; /* Limit the maximum width of the main element to 800 pixels */
+  margin-top: 40px; /* Add some margin above the main element */
+}
+
+/* Define a style for each section element inside the main element */
+main section {
+  border: 2px solid var(--accent-color); /* Add a border around each section element with the accent color variable */
+  border-radius: 10px; /* Make the corners of each section element rounded */
+  padding: 20px; /* Add some padding around each section element */
+  margin-bottom: 40px; /* Add some margin below each section element */
+  background: radial-gradient(circle at center, var(--bg-color), transparent); /* Use a radial gradient for the background color */
+  transition: transform 0.3s; /* Add a transition effect to the transform property */
+}
+
+/* Define a style for each section element when hovered */
+main section:hover {
+  transform: scale(1.1); /* Increase the scale of each section element when hovered */
+}
+
+/* Define a style for each h2 element inside each section element */
+main section h2 {
+  text-align: center; /* Center the text horizontally */
+  font-size: 24px; /* Increase the font size of the text */
+  margin-bottom: 20px; /* Add some margin below each h2 element */
+}
+
+@media (max-width: 600px) {
+  /* Define a media query for small screens */
+
+  /* Define a style for the main element on small screens */
+  main {
+    width: 90%; /* Make the main element span 90% of the width of the page */
+      }
+
+      /* Define a style for each section element on small screens */
+      main section {
+        padding: 10px; /* Reduce the padding around each section element */
+        margin-bottom: 20px; /* Reduce the margin below each section element */
+      }
+
+      /* Define a style for each h2 element on small screens */
+      main section h2 {
+        font-size: 18px; /* Reduce the font size of the text */
+        margin-bottom: 10px; /* Reduce the margin below each h2 element */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Travis Nyland</h1>
+  </header>
+  <main>
+    <section id="bio">
+      <h2>Bio</h2>
+      <p>Hi, I'm Travis Nyland, a software developer with a passion for creating innovative and user-friendly applications. I have experience in various programming languages and technologies, such as Java, Python, HTML, CSS, JavaScript, Ajax, Servlets, etc. I enjoy learning new skills and exploring new challenges. I'm always looking for opportunities to collaborate with other developers and contribute to meaningful projects.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://github.com/travisnyland/currency-converter"><img src="currency.png" alt="Currency Converter" width="100" height="100"> Currency Converter</a>: A web application that uses Ajax and Java servlets to fetch real time exchange rates from Google and display them on a web interface.</li>
+        <li><a href="https://github.com/travisnyland/todo-list"><img src="todo.png" alt="Todo List" width="100" height="100"> Todo List</a>: A web application that uses HTML, CSS, and JavaScript to create and manage a list of tasks.</li>
+        <li><a href="https://github.com/travisnyland/chat-bot"><img src="chat.png" alt="Chat Bot" width="100" height="100"> Chat Bot</a>: A web application that uses Python and Flask to create and interact with a chat bot that can answer questions and generate content.</li>
+      </ul>
+    </section>
+    <section id="photo">
+      <h2>Photo</h2>
+      <img src="travis.jpg" alt="Travis Nyland" width="300" height="400">
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you want to get in touch with me, you can use any of the following methods:</p>
+      <ul>
+        <li><img src="email.png" alt="Email" width="20" height="20"> Email: travisnyland@gmail.com</li>
+        <li><img src="phone.png" alt="Phone" width="20" height="20"> Phone: +1 (123) 456-7890</li>
+        <li><img src="twitter.png" alt="Twitter" width="20" height="20"> Twitter: @travisnyland</li>
+      </ul>
+    </section>
+    <section id="education">
+      <h2>Education</h2>
+      <p>I have a Bachelor of Science degree in Computer Science from the University of Washington, where I graduated with honors in 2021. I also have a certificate in Web Development from Coursera, where I completed several online courses on HTML, CSS, JavaScript, Ajax, and other web technologies.</p>
+    </section>
+    <section id="links">
+      <h2>Links</h2>
+      <p>Here are some links to my online profiles and portfolios:</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/travis-nyland/"><img src="linkedin.png" alt="LinkedIn" width="20" height="20"> LinkedIn</a>: My professional network and resume.</li>
+        <li><a href="https://github.com/travisnyland"><img src="github.png" alt="GitHub" width="20" height="20"> GitHub</a>: My code repository and showcase.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html> 

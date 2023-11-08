@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>RPG Game</h1>
+        <div v-if="gameStarted">
+            <div>
+                <p>Player Health: {{ player.health }}</p>
+                <p>Enemy Health: {{ enemy.health }}</p>
+            </div>
+            <div v-if="!gameOver">
+                <div>
+                    <label>Action:
+                        <select v-model="selectedAction">
+                            <option value="attack">Attack</option>
+                            <option value="heal">Heal</option>
+                            <option value="buff">Apply Buff</option>
+                            <option value="debuff">Apply Debuff to Enemy</option>
+                        </select>
+                    </label>
+                </div>
+                <div v-if="selectedAction === 'attack'">
+                    <label>Attack Type:
+                        <select v-model="selectedOption">
+                            <option v-for="attack in attackOptions" :value="attack.value">{{ attack.text }}</option>
+                        </select>
+                    </label>
+                    <p>Preview: {{ attackPreviews[selectedOption - 1] }}</p>
+                </div>
+                <div v-if="selectedAction === 'buff' || selectedAction === 'debuff'">
+                    <label>Type:
+                        <select v-model="selectedOption">
+                            <option v-for="type in buffDebuffOptions" :value="type.value">{{ type.text }}</option>
+                        </select>
+                    </label>
+                </div>
+                <button @click="performAction">Perform Action</button>
+            </div>
+            <div v-if="gameOver">
+                <p v-if="player.health <= 0">Game Over! Enemy has won!</p>
+                <p v-else>Congratulations! You have defeated the Enemy!</p>
+                <button @click="startGame">Play Again</button>
+            </div>
+        </div>
+        <div v-else>
+            <button @click="startGame">Start Game</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

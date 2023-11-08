@@ -1,0 +1,125 @@
+// A simple game of tic-tac-toe with a GUI
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class TicTacToe extends JFrame implements ActionListener {
+  // The board is a 3x3 array of buttons
+  private JButton[][] board = new JButton[3][3];
+  // The turn is either X or O
+  private char turn = 'X';
+  // The status is a label to show messages
+  private JLabel status = new JLabel("X's turn");
+
+  public TicTacToe() {
+    // Set the title and size of the frame
+    super("Tic-Tac-Toe");
+    setSize(300, 300);
+    // Set the layout to a grid of 4 rows and 3 columns
+    setLayout(new GridLayout(4, 3));
+    // Add the buttons and the status to the frame
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        board[i][j] = new JButton(" ");
+        board[i][j].addActionListener(this);
+        add(board[i][j]);
+      }
+    }
+    add(status);
+    // Set the frame to be visible and exit on close
+    setVisible(true);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  }
+
+  // The action listener for the buttons
+  public void actionPerformed(ActionEvent e) {
+    // Get the source of the event
+    JButton source = (JButton) e.getSource();
+    // If the button is empty, mark it with the current turn
+    if (source.getText().equals(" ")) {
+      source.setText(String.valueOf(turn));
+      // Check if the game is over
+      if (isGameOver()) {
+        // Show the winner or a tie
+        status.setText(turn + " wins!");
+        disableButtons();
+      } else if (isBoardFull()) {
+        status.setText("It's a tie!");
+        disableButtons();
+      } else {
+        // Switch the turn and update the status
+        turn = (turn == 'X') ? 'O' : 'X';
+        status.setText(turn + "'s turn");
+      }
+    }
+  }
+
+  // Check if the game is over by finding three in a row
+  private boolean isGameOver() {
+    for (int i = 0; i < 3; i++) {
+      // Check the rows
+      if (board[i][0].getText().equals(board[i][1].getText()) &&
+          board[i][1].getText().equals(board[i][2].getText()) &&
+          !board[i][0].getText().equals(" ")) {
+        return true;
+      }
+      // Check the columns
+      if (board[0][i].getText().equals(board[1][i].getText()) &&
+          board[1][i].getText().equals(board[2][i].getText()) &&
+          !board[0][i].getText().equals(" ")) {
+        return true;
+      }
+    }
+    // Check the diagonals
+    if (board[0][0].getText().equals(board[1][1].getText()) &&
+        board[1][1].getText().equals(board[2][2].getText()) &&
+        !board[0][0].getText().equals(" ")) {
+      return true;
+    }
+    if (board[0][2].getText().equals(board[1][1].getText()) &&
+        board[1][1].getText().equals(board[2][0].getText()) &&
+        !board[0][2].getText().equals(" ")) {
+      return true;
+    }
+    // Otherwise, the game is not over yet
+    return false;
+  }
+
+  // Check if the board is full by finding any empty button
+  private boolean isBoardFull() {
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        if (board[i][j].getText().equals(" ")) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  // Disable all the buttons when the game is over
+  private void disableButtons() {
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        board[i][j].setEnabled(false);
+      }
+    }
+  }
+
+
+  // The main method to run the game
+    public static void main(String[] args) {
+        new TicTacToe();
+    }
+}
+
+//The code is pretty straightforward. The board is a 3x3 array of buttons.
+//The turn is either X or O. The status is a label to show messages. 
+//The constructor sets the title and size of the frame, sets the layout to a grid of 4 rows and 3 columns, 
+//adds the buttons and the status to the frame, and sets the frame to be visible and exit on close. 
+//The action listener for the buttons gets the source of the event, checks if the button is empty, 
+//marks it with the current turn, checks if the game is over, and updates the status. 
+//The isGameOver method checks if the game is over by finding three in a row. 
+//The isBoardFull method checks if the board is full by finding any empty button. 
+//The disableButtons method disables all the buttons when the game is over. 
+//The main method creates a new TicTacToe object to run the game.

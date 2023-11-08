@@ -1,0 +1,98 @@
+Sure, I can suggest a sharper font for your name at the top. One possible font that resembles the one used for the cover of the game “Cyberpunk 2077” is called Cyberpunk 2077 Font by Nils R. This font is available for free download from https://www.dafont.com/cyberpunk-2077.font.
+
+To use this font in your web page, you need to do the following steps:
+
+Download the font file (cyberpunk-2077.ttf) from the website and save it in your web project folder.
+Add a @font-face rule in your style element to define the font name and source. For example:
+@font-face {
+  font-family: "Cyberpunk 2077";
+  src: url("cyberpunk-2077.ttf");
+}
+Apply the font to your h1 element using the font-family property. For example:
+header h1 {
+  font-family: "Cyberpunk 2077", monospace;
+}
+This should make your name at the top look sharper and more futuristic.
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+Some other tricks that I can offer that would make your website stand out while keeping in theme are:
+
+Adding some neon or glowing effects to your text or images using the text-shadow or box-shadow properties. For example:
+header h1 {
+  text-shadow: 0 0 10px var(--accent-color); /* Add a glowing effect to your name */
+}
+
+main section h2 {
+  text-shadow: 0 0 5px var(--gradient-color); /* Add a neon effect to your section titles */
+}
+
+main section a img {
+  box-shadow: 0 0 10px var(--accent-color); /* Add a glowing effect to your project images */
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+Adding some background music or sound effects to your web page using the audio element. For example:
+<audio src="cyberpunk-music.mp3" autoplay loop> <!-- Add a background music that plays automatically and loops -->
+  Your browser does not support the audio element.
+</audio>
+Adding some parallax scrolling or animation effects to your web page using the transform or animation properties. For example:
+body {
+  perspective: 1000px; /* Add some perspective to the body element */
+}
+
+main section {
+  transform: translateZ(-200px); /* Move each section element back in the Z-axis */
+}
+
+main section:hover {
+  transform: translateZ(0px); /* Move each section element forward in the Z-axis when hovered */
+}
+
+header h1 {
+  animation: glitch 1s infinite; /* Add a glitch animation to your name */
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0% 0% 0% 0%); }
+  10% { clip-path: inset(10% 0% 10% 0%); }
+  20% { clip-path: inset(20% 0% 20% 0%); }
+  /* ... */
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+Some more tricks that I can offer for your web page are:
+
+Adding some hover effects or tooltips to your links or icons using the :hover pseudo-class or the title attribute. For example:
+main section a:hover {
+  text-decoration: none; /* Remove the underline from the links when hovered */
+  color: var(--gradient-color); /* Change the color of the links when hovered */
+}
+
+main section a img:hover {
+  filter: brightness(150%); /* Increase the brightness of the images when hovered */
+}
+
+main section ul li img {
+  margin-right: 10px; /* Add some margin to the right of the icons */
+}
+<li><img src="email.png" alt="Email" width="20" height="20" title="Send me an email"> Email: travisnyland@gmail.com</li> <!-- Add a tooltip to the email icon -->
+Adding some responsiveness or adaptability to your web page using the @media rule or the viewport meta tag. For example:
+@media (max-width: 400px) {
+  /* Define a media query for very small screens */
+
+  /* Define a style for the header element on very small screens */
+  header {
+    padding: 10px; /* Reduce the padding around the header element */
+  }
+
+  /* Define a style for the h1 element on very small screens */
+  header h1 {
+    font-size: 24px; /* Reduce the font size of the text */
+  }
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Add a viewport meta tag to make the web page fit the screen size -->
+Adding some accessibility or usability features to your web page using the alt or aria attributes. For example:
+<img src="travis.jpg" alt="Travis Nyland" width="300" height="400" aria-label="A photo of Travis Nyland"> <!-- Add an alt and an aria-label attribute to the image element -->
